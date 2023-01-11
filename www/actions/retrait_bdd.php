@@ -16,7 +16,7 @@ if ($user === false) {
 	error_die('Email incorrect', '/?page=retrait_bdd');
 }
 //verifier le numéro de compte
-if (!$Withdraw->verify_Account_User($_POST['id_account'])) {
+if (!$account->verify_Account_User($_POST['id_account'])) {
 	error_die('Numéro de compte', '/?page=retrait_bdd');
 }
 // Verifier le mot de passe
