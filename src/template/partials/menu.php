@@ -55,14 +55,26 @@
               </a>
             </li>
             <?php } ?>
+
+            <?php if ($user->role == 1000) { ?>
+            <li>
+              <a href="/?page=adminPage" class="nav-link text-white">
+                <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#speedometer2"/></svg>
+                Verif user
+              </a>
+            </li>
+            <?php } ?>
+
             <li>
               <a href="#" class="nav-link text-white">
                 <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#people-circle"/></svg>
-                <?php if ($role = 10){ ?>
+                <?php 
+                
+                if ($user->role == 10){ ?>
                   Customers  
-                <?php } elseif ($role = 200) { ?>
+                <?php } elseif ($user->role == 200) { ?>
                     Manager
-                <?php } elseif ($role = 1000) { ?>
+                <?php } elseif ($user->role == 1000) { ?>
                     Admin
                 <?php } else { ?>
                     On hold
