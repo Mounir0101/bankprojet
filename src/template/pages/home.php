@@ -17,5 +17,7 @@ $page_content = ob_get_clean();
 // Script de la page home
 ob_start();
 ?>
+
 <?php
 $page_scripts = ob_get_clean();
+?>
