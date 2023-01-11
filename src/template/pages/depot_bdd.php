@@ -8,9 +8,9 @@ ob_start();
 <h1>Dêpot</h1>
 
 <form action="/actions/depot_bdd.php" method="post">
-	<div>
-		<label for="email">Email</label>
-		<input type="text" id="email" name="email">
+    <div>
+		<label for="id_user">Identifiant de l'utilisateur</label>
+		<input type="text" id="id_user" name="id_user">
 	</div>
 	<div>
 		<label for="password">Mot de passe</label>
