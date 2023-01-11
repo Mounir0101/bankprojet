@@ -11,7 +11,7 @@ class User {
 	public static function create($email, $password, $role = 1, $ip) {
 		$user = new User();
 		$user->email = $email;
-		$user->password = hash('sha256', $password);
+		$user->password = hash('', $password);
 		$user->role = $role;
 		$user->last_ip = $ip;
 		return $user;
