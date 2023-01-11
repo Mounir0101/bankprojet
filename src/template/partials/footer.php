@@ -18,10 +18,8 @@
                     </div>
                 </div>
                 <div>
-                    <h2 class="TitreFooter">Power Of Memory</h2>
+                    <h2 class="TitreFooter">Banque du codeur</h2>
                     <ul class="ListeGeneralFooter">
-                        <li class="listeFooter"><a href="memory.php">Jouez !</a></li>
-                        <li class="listeFooter"><a href="scores.php">Les scores</a></li>
                         <li class="listeFooter"><a href="contact.php">Nous contacter</a></li>
                     </ul>
                 </div>
@@ -29,7 +27,6 @@
         </div>
         <p class="copyright">Copyright © 2022 Tous droits réservés</p>
 </footer>
-
 <!-- balises scripts de fin de page -->
 
 </body>
