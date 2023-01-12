@@ -14,7 +14,7 @@ ob_start();
 		<input type="text" id="id_user" name="id_user">
 	</div>
     <div>
-        <label for="id_account">Numéro d'id'entification du compte</label>
+        <label for="id_account">Numéro d'identification du compte</label>
         <input type="text" id="id_account" name="id_account">
     </div>
 	<div>
