@@ -20,8 +20,6 @@ if (!$user->verifyPassword($_POST['password'])) {
 	error_die('Mot de passe incorrect', '/?page=login');
 }
 
-//
-
 // on verra pourquoi on ne stock que l'id
 $_SESSION['user_id'] = $user->id;
 

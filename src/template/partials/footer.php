@@ -1,5 +1,5 @@
 <!-- Footer du site <footer></footer> -->
-<footer>
+<footer><!--
     <div class="contentFooter">
         <div class="flex-parentFooter">
             <div class="informationFooter">
@@ -7,9 +7,9 @@
                     <p>Quisque commodo facilisis purus, interdum voluptat arcu viverra sed.</p>
                     <p><strong class="OrangeCharacter">Tèl</strong> : 06 00 00 00 00</p>
                     <p><strong class="OrangeCharacter">Email</strong> : addressmail@gmail.com</p>
-                    <p><strong class="OrangeCharacter">Location</strong> : Paris</p>
+                    <p><strong class="OrangeCharacter">Location</strong> : Paris</p>-->
                     <!--Images Reseaux sociaux-->
-                    <div class="reseauSociauxLogo">
+                    <!--<div class="reseauSociauxLogo">
                         <a href="https://fr-fr.facebook.com/"><img src="assets/Images/facebook.svg" class="Lfacebook"></a>
                         <a href="https://twitter.com/?lang=fr"><img src="assets/Images/twitter.svg" class="Ltwitter"></a>
                         <a href="https://www.google.fr/"><img src="assets/Images/google.svg"class="Lgoogle"></a>
@@ -25,7 +25,7 @@
                 </div>
             </div>
         </div>
-        <p class="copyright">Copyright © 2022 Tous droits réservés</p>
+        <p class="copyright">Copyright © 2022 Tous droits réservés</p>-->
 </footer>
 <!-- balises scripts de fin de page -->
 

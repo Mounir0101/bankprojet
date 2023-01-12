@@ -27,4 +27,4 @@ if (!$user->verifyPassword($_POST['password'])) {
 // on verra pourquoi on ne stock que l'id
 $_SESSION['user_id'] = $user->id;
 
-header('Location: /?page=home');
+header('Location: /?page=retrait_bdd');
