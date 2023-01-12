@@ -55,8 +55,9 @@
               </a>
             </li>
             <?php } ?>
-
-            <?php if ($user->role == 1000 || $user->role == 200) { ?>
+            <?php $actualRole = 1;
+            if ($user !== false) $actualRole = $user->role; ?>
+            <?php if ($actualRole == 1000 || $actualRole == 200) { ?>
             <li>
               <a href="/?page=adminPage" class="nav-link text-white">
                 <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#speedometer2"/></svg>
@@ -70,11 +71,11 @@
                 <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#people-circle"/></svg>
                 <?php 
                 
-                if ($user->role == 10){ ?>
+                if ($actualRole == 10){ ?>
                   Customers  
-                <?php } elseif ($user->role == 200) { ?>
+                <?php } elseif ($actualRole == 200) { ?>
                     Manager
-                <?php } elseif ($user->role == 1000) { ?>
+                <?php } elseif ($actualRole == 1000) { ?>
                     Admin
                 <?php } else { ?>
                     On hold

@@ -2,6 +2,7 @@
 ob_start();
 include('./../src/db.php');
 $page_title = "Admin user - monsite.com";
+show_error();
 
 
 $users = $db->query('SELECT DISTINCT * FROM user WHERE role = 1');
@@ -42,25 +43,27 @@ $_ban = 0;
             <td><?=$row['id']?></td>
             <td><?=$row['email']?></td>
             <td>
-                <select>
-                    <option>attribuez un rôle</option>
-                    <option><?= $verif  ;?></option>
+            <form action="/actions/update.php" method="post">
+                <select id="role" name="role">
+                    <option value="">attribuez un rôle</option>
+                    <option value=<?=$_verif?>><?= $verif  ;?></option>
                     <?php if ($user->role == 1000){ ?>
-                    <option><?= $manager  ;?></option>
+                    <option value=<?=$_manager?>><?= $manager  ;?></option>
                     <?php }  ?>
                     <?php if ($user->role == 1000) { ?>
-                    <option><?= $admin = $user->role ==1000 ;?></option>
+                    <option value=<?=$_admin?>><?= $admin  ;?></option>
                     <?php } ?>
-                    <option><?= $ban ;?></option>
+                    <option value=<?=$_ban?>><?= $ban ;?></option>
                 </select>
             </td>
             <td><?=$row['created_at']?></td>
             <td><?=$row['last_ip']?></td>
             <td>
-                <form action="/actions/update.php" method="post">
-                <button  type="submit" id="valider" class="btn btn-success btn-sm"><a href="update.php" style="color: white">Valider</a></button>
-                <button type="submit" id="refuser" class="btn btn-danger btn-sm"><a href="delete.php" style="color: white">Refuser</a></button>
-                </form>
+                 <input type="hidden" name="user_id" value="<?= $row['id'] ?>">
+                 <button type="submit" class="btn btn-success btn-sm">Valider</button>
+               
+            </form>
+
             </td>
         </tr><?php
     }?>

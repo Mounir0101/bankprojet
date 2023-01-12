@@ -17,6 +17,8 @@ class User {
 		return $user;
 	}
 
+    
+
 	public function verifyPassword($password) {
 		$hashPassword = hash('sha256', $password);
 		return ($hashPassword === $this->password);

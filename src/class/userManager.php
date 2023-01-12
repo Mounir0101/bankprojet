@@ -14,11 +14,23 @@ class UserManager {
 		]);
 		return $this->db->lastInsertId();
 	}
-    public function valideAccount(){
-        $stmt = $this->db->prepare('INSERT INTO account( currency_id, balance , user_id) VALUES(?,?,? ');
-        $stmt->execute();
+    public function valideAccount($id , $role){
+        echo ($role);
+       
+        
+        $stmt = $this->db->prepare('UPDATE user SET role = ? WHERE id = ?');
+        $stmt->execute([ 
+            $role,
+            $id ]);
     }
     
+	public function createAccount($id, $currency , $amount){
+		$stmt = $this->db->prepare('INSERT INTO account( currency_id , balance, user_id) VALUES(?, ?, ?)');
+		$stmt->execute([$id, $currency, $amount]);
+
+
+	}
+   
 
 	public function getByEmail($email) {
 		$stmh = $this->db->prepare('SELECT * FROM user WHERE email = ?');

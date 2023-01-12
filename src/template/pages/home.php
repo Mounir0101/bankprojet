@@ -7,13 +7,13 @@ $page_title = "Accueil - MonSite.com";
 
 // on_start, c'est comme si tu ouvrais les "" pour enregistrer une grosse chaîne de caractère
 ob_start();
-?>
-
-<?php if ($user->role ==1000) { ?>
+$actualRole = 1;
+if ($user !== false) $actualRole = $user->role;
+if ($actualRole ==1000) { ?>
     <h1>Welcome Admin</h1>
- <?php } else if ($user->role == 200) { ?> 
-    <h1>Welecome Manager</h1> 
-<?php } else if ($user->role == 10) { ?> 
+ <?php } else if ($actualRole == 200) { ?> 
+    <h1>Welcome Manager</h1> 
+<?php } else if ($actualRole == 10) { ?> 
     <h1>Welcome Customers</h1>
 <?php } else { ?>
     <h1>On hold wait your validation account</h1>
@@ -32,7 +32,7 @@ ob_start();
 
 
 
-<?php if ($user->role == 1000 || $user->role ==200 ) { ?>
+<?php if ($actualRole == 1000 || $actualRole ==200 ) { ?>
 <div class="album py-5 bg-light">
     <div class="container">
 
@@ -44,8 +44,9 @@ ob_start();
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                  <button type="button" href="/src/template/pages/accountPage.php" class="btn btn-sm btn-outline-secondary">Edit</button>
                 </div>
+                
                 <small class="text-muted">9 mins</small>
               </div>
             </div>
@@ -83,6 +84,7 @@ ob_start();
         </div>
     <?php } ?>
 
+                
 
 
 
@@ -90,7 +92,8 @@ ob_start();
 
 
 
-<?php if ($user->role == 10) { ?>
+
+<?php if ($actualRole == 10) { ?>
 <div class="album py-5 bg-light">
     <div class="container">
 
