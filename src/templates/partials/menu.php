@@ -8,8 +8,8 @@
 <?php } else { ?>
 	<li><?= $user->email; ?></li>
 	<li><a href="/actions/logout.php">Logout</a></li>
-	<li><a href="/actions/retrait_bdd.php">retrait</a><li>
-	<li><a href="/actions/conversion.php">conversion</a><li>
+	<li><a href="/?page=operations">operations</a><li>
+	<li><a href="/?page=conversion">conversion</a><li>
 <?php } ?>
 	<li><a href="/?page=admin_contact">Admin Contact</a></li>
 </ul>

@@ -10,7 +10,7 @@ show_error();
 
 
 <form action="/actions/signup.php" method="post">
-<div>
+	<div>
 		<label for="fullname">fullname</label>
 		<input type="text" id="fullname" name="fullname">
 	</div>
