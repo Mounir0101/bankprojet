@@ -11,10 +11,9 @@ class Deposit {
         $Deposit = new Deposit();
         $Deposit ->id_user = $id_user;
         $Deposit ->id_account_user = $id_account_user;
-        $Deposit ->Deposit_value = $Deposit_value;
+        $Deposit ->deposit_value = $Deposit_value;
         return $Deposit;
     }
-
 
 
     public function verify_Account_User($id_account_user) {
@@ -23,3 +22,4 @@ class Deposit {
     }
 }
 ?>
+
