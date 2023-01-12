@@ -13,10 +13,12 @@ if (filter_var($_POST['email'], FILTER_VALIDATE_EMAIL) === false) {
 // Verifier si utilisateur existe en DB
 $user = $userManager->getByEmail($_POST['email']);
 if ($user === false) {
-	error_die('Mot de passe incorrect', '/?page=retrait_bdd');
+	error_die('Email incorrect', '/?page=retrait_bdd');
 }
 //verifier le numéro de compte
-
+if (!$account->verify_Account_User($_POST['id_account'])) {
+	error_die('Numéro de compte', '/?page=retrait_bdd');
+}
 // Verifier le mot de passe
 if (!$user->verifyPassword($_POST['password'])) {
 	error_die('Mot de passe incorrect', '/?page=retrait_bdd');

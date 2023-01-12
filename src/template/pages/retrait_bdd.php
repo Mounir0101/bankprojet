@@ -8,10 +8,7 @@ ob_start();
 <h1>Retrait</h1>
 
 <form action="/actions/retrait_bdd.php" method="post">
-	<div>
-		<label for="email">Email</label>
-		<input type="text" id="email" name="email">
-	</div>
+	
     <div>
 		<label for="id_user">Identifiant de l'utilisateur</label>
 		<input type="text" id="id_user" name="id_user">
