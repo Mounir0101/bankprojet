@@ -7,7 +7,7 @@ class User {
 	public $role;
 	public $created_at;
 	public $last_ip;
-
+	
 	public static function create($email, $password, $role = 1, $ip) {
 		$user = new User();
 		$user->email = $email;

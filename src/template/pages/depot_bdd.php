@@ -26,3 +26,4 @@ ob_start();
 <?php
 // ob_get_clean c'est la fermeture des "" pour finir la chaine de caracteres et l'enregistrer dans la variable
 $page_content = ob_get_clean();
+
