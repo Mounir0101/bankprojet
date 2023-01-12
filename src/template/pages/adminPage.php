@@ -44,17 +44,23 @@ $_ban = 0;
             <td>
                 <select>
                     <option>attribuez un rôle</option>
-                    <option><?= $verif ;?></option>
-                    <option><?= $manager ;?></option>
-                    <option><?= $admin ;?></option>
+                    <option><?= $verif  ;?></option>
+                    <?php if ($user->role == 1000){ ?>
+                    <option><?= $manager  ;?></option>
+                    <?php }  ?>
+                    <?php if ($user->role == 1000) { ?>
+                    <option><?= $admin = $user->role ==1000 ;?></option>
+                    <?php } ?>
                     <option><?= $ban ;?></option>
                 </select>
             </td>
             <td><?=$row['created_at']?></td>
             <td><?=$row['last_ip']?></td>
             <td>
-                <button type="button" class="btn btn-success btn-sm"><a href="update.php" style="color: white">Valider</a></button>
-                <button type="button" class="btn btn-danger btn-sm"><a href="delete.php" style="color: white">Refuser</a></button>
+                <form action="/actions/update.php" method="post">
+                <button  type="submit" id="valider" class="btn btn-success btn-sm"><a href="update.php" style="color: white">Valider</a></button>
+                <button type="submit" id="refuser" class="btn btn-danger btn-sm"><a href="delete.php" style="color: white">Refuser</a></button>
+                </form>
             </td>
         </tr><?php
     }?>

@@ -15,13 +15,8 @@
     
 
 <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <style>
-    .py-5 {
-        margin-bottom:-200px;
-       
-       
-    }
+<style>
+    
     
       .bd-placeholder-img {
         font-size: 1.125rem;
@@ -37,19 +32,9 @@
         }
       }
 
-      .b-example-divider {
-        height: 3rem;
-        background-color: rgba(0, 0, 0, .1);
-        border: solid rgba(0, 0, 0, .15);
-        border-width: 1px 0;
-        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
-      }
 
-      .b-example-vr {
-        flex-shrink: 0;
-        width: 1.5rem;
-        height: 100vh;
-      }
+
+      
 
       .bi {
         vertical-align: -.125em;
@@ -74,6 +59,7 @@
         -webkit-overflow-scrolling: touch;
       }
     </style>
+   
 
     
   </head>
@@ -102,7 +88,7 @@
 
 
 
-<div class="b-example-divider"></div>
+
 
 
 <div class="container">

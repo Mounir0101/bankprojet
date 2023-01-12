@@ -14,6 +14,11 @@ class UserManager {
 		]);
 		return $this->db->lastInsertId();
 	}
+    public function valideAccount(){
+        $stmt = $this->db->prepare('INSERT INTO account( currency_id, balance , user_id) VALUES(?,?,? ');
+        $stmt->execute();
+    }
+    
 
 	public function getByEmail($email) {
 		$stmh = $this->db->prepare('SELECT * FROM user WHERE email = ?');
@@ -30,6 +35,10 @@ class UserManager {
 		$user = $stmh->fetch();
 		return $user;
 	}
+   
+
+
+
 
 	// public function save_contact_form($fullname, $phone, $email, $message) {
 	// 	$stmh = $this->db->prepare('INSERT INTO contact_forms(fullname, phone, email, message) VALUES(:fullname, :phone, :email, :message)');
