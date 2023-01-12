@@ -16,6 +16,7 @@ class Deposit {
     }
 
 
+    // fonction qui verif le compte de l'utilisateur
     public function verify_Account_User($id_account_user) {
         $verifAccount = $id_account_user;
         return ($verifAccount === $this->id_account_user);
