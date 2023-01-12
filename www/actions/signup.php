@@ -2,7 +2,11 @@
 
 require_once __DIR__ . "/../../src/init.php";
 
-if (!isset($_POST['email'], $_POST['password'], $_POST['cpassword'])) {
+if (empty($_POST['fullname'])||  empty($_POST['email']) || empty($_POST['password']) || empty($_POST['cpassword'])) {
+    error_die('Veuillez remplir tous les champs', '/?page=signup');
+}
+
+if (!isset($_POST['fullname'], $_POST['email'], $_POST['password'], $_POST['cpassword'])) {
 	error_die('Erreur du formulaire', '/?page=signup');
 }
 
@@ -26,7 +30,7 @@ if ($alreadyUser !== false) {
 }
 
 // Creer et inserer utilisateur en DB
-$user = User::create($_POST['email'], $_POST['password'], 1, $_SERVER['REMOTE_ADDR']);
+$user = User::create($_POST['fullname'],$_POST['email'], $_POST['password'], 1, $_SERVER['REMOTE_ADDR']);
 $user_id = $userManager->insert($user);
 
 // on verra pourquoi on ne stock que l'id

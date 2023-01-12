@@ -1,7 +1,7 @@
 <?php
 
 class account {
-    public $id;
+    public $account_id;
 	public $currency_id;
 	public $balance;
 	public $user_id;

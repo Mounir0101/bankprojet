@@ -4,6 +4,7 @@ $page_title = "Login - MonSite.com";
 
 // ob_start, c'est comme si tu ouvrais les "" pour enregistrer une grosse chaine de caracteres.
 ob_start();
+show_error();
 ?>
 <h1>Login</h1>
 
