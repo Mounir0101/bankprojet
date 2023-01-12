@@ -9,11 +9,11 @@ class User {
 	public $created_at;
 	public $last_ip;
 
-	public static function create($fullname, $email, $password, $role = 1, $ip) {
+	public static function create($fullname, $email, $password, $role = 1, $ip = null) {
 		$user = new User();
-		$fullname->fullname = $fullname;
+		$user->fullname = $fullname;
 		$user->email = $email;
-		$user->password = hash('', $password);
+		$user->password = hash('sha256', $password);
 		$user->role = $role;
 		$user->last_ip = $ip;
 		return $user;
