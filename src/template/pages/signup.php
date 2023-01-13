@@ -4,10 +4,10 @@ $page_title = "SignUp - MonSite.com";
 
 // ob_start, c'est comme si tu ouvrais les "" pour enregistrer une grosse chaine de caracteres.
 ob_start();
+show_error(); 
 ?>
 <h1>Signup</h1>
 
-<?php show_error(); ?>
 
 <form action="/actions/signup.php" method="post">
 	<div>

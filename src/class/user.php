@@ -2,14 +2,16 @@
 
 class User {
 	public $id;
+	public $fullname;
 	public $email;
 	public $password;
 	public $role;
 	public $created_at;
 	public $last_ip;
-	
-	public static function create($email, $password, $role = 1, $ip) {
+
+	public static function create($fullname, $email, $password, $role = 1, $ip) {
 		$user = new User();
+		$fullname->fullname = $fullname;
 		$user->email = $email;
 		$user->password = hash('', $password);
 		$user->role = $role;
