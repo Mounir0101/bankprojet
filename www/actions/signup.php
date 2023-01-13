@@ -34,4 +34,5 @@ $_SESSION['user_id'] = $user_id;
 
 header('Location: /?page=home');
 
+
 ?>

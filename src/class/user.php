@@ -8,7 +8,7 @@ class User {
 	public $created_at;
 	public $last_ip;
 
-	public static function create($email, $password, $role = 1, $ip) {
+	public static function create($email, $password, $role = 1, $ip = null) {
 		$user = new User();
 		$user->email = $email;
 		$user->password = hash('sha256', $password);
@@ -16,6 +16,8 @@ class User {
 		$user->last_ip = $ip;
 		return $user;
 	}
+
+    
 
 	public function verifyPassword($password) {
 		$hashPassword = hash('sha256', $password);
