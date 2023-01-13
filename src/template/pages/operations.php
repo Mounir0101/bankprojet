@@ -11,7 +11,7 @@ ob_start();
     <li><a href="/retrait_bdd.php">Retrait</a></li>
     <li><a href="/transactions_bdd.php">Transaction</a></li>
     <li><a href="/depot_bdd.php">Depot</a></li>
-    <li><a href="/convertion.php"></a></li>
+    <li><a href="/conversion.php"></a></li>
 </ol>
 <?php
 // ob_get_clean c'est la fermeture des "" pour finir la chaine de caracteres et l'enregistrer dans la variable
