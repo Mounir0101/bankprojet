@@ -7,11 +7,11 @@ class User {
 	public $role;
 	public $created_at;
 	public $last_ip;
-
+	
 	public static function create($email, $password, $role = 1, $ip = null) {
 		$user = new User();
 		$user->email = $email;
-		$user->password = hash('sha256', $password);
+		$user->password = hash('', $password);
 		$user->role = $role;
 		$user->last_ip = $ip;
 		return $user;
