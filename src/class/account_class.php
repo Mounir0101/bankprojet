@@ -19,7 +19,7 @@ class account {
 
 	public function verify_Account_User($user_id) {
 		$verifAccount = $user_id;
-		return ($verifAccount === $this->id);
+		return ($verifAccount === $this->user_id);
 	}
 }
 ?>
