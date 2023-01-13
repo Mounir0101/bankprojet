@@ -12,7 +12,7 @@ require_once __DIR__ . '/db.php';
 require_once __DIR__ . '/utils/errors.php';
 
 // pages existantes sur notre site internet
-$pages = ['home', 'contact', 'signup', 'login', 'admin_contact', 'retrait_bdd, conversion_euro, conversion_dollars, conversion_bitcoin, conversion, operations, depot_bdd, transactions, logout'];
+$pages = ['home', 'contact', 'signup', 'login', 'admin_contact', 'retrait_bdd, conversion_euro, conversion_dollars, conversion_bitcoin, conversion, operations, depot_bdd, transactions, logout, accountPage'];
 
 // init variables vides pour le template
 $page_scripts = "";
