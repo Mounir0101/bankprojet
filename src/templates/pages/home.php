@@ -105,7 +105,7 @@ if ($actualRole ==1000) { ?>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Request</button>
+                <a href="/?page=transactions" type="button" class="btn btn-sm btn-outline-secondary">Request</a>
                 </div>
                 <small class="text-muted">9 mins</small>
               </div>
@@ -119,8 +119,7 @@ if ($actualRole ==1000) { ?>
              
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                  
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Request</button>
+                
                 
             </div>
           </div>
@@ -132,8 +131,7 @@ if ($actualRole ==1000) { ?>
               
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-               
+                  <a href="/?page=conversion" type="button" class="btn btn-sm btn-outline-secondary">View</a>
             </div>
           </div>
         </div>

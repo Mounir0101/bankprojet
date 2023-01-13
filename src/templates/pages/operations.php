@@ -8,7 +8,7 @@ ob_start();
 <h1>Opérations</h1>
 <br>
 <ol>
-    <li><a href="/retrait_bdd.php">Retrait</a></li>
+    <li><a href="/retrait_bdd.php">convertion</a></li>
     <li><a href="/transactions_bdd.php">Transaction</a></li>
     <li><a href="/depot_bdd.php">Depot</a></li>
     <li><a href="/convertion.php">Convertion</a></li>
